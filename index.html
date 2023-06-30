@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <title>Frontend Mentor | [Blogr]</title>
+  <link rel="icon" type="image/png" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+
+
+
+<header>
+  <div class="container_logo">
+    <h1>Blogr</h1>
+
+    <button id="btn_nav_bar"><img id="img_button" src="images/icon-hamburger.svg" alt="menu bar"></button>
+  </div>
+ 
+  <img id="logo_desktop" src="images/logo.svg" alt="">
+  <div id="menu" class="hidden">
+    <div class="container_nav_nar">
+      <!--container_nav_nar-->
+      <nav class="dropdow">
+        <ul>
+          <li>Product <picture>
+            <source media="(min-width: 800px)" srcset="images/icon-arrow-light.svg">
+            <img src="images/icon-arrow-dark.svg" alt="">
+          </picture>
+            <!--dropdow-->
+            <nav class="dropdow_nav">
+              <a href="">Pricing</a>
+              <a href="">Marketplace</a>
+              <a href="">Features</a>
+              <a href="">Integrations</a>
+            </nav>
+          </li>
+          <li>Company  <picture>
+            <source media="(min-width: 800px)" srcset="images/icon-arrow-light.svg">
+            <img src="images/icon-arrow-dark.svg" alt="">
+          </picture>
+            <!--dropdow-->
+            <nav class="dropdow_nav">
+              <a href="">About</a>
+              <a href="">Team</a>
+              <a href="">Blog</a>
+              <a href="">Careers</a>
+            </nav>
+          </li>
+          <li>Connect  <picture>
+            <source media="(min-width: 800px)" srcset="images/icon-arrow-light.svg">
+            <img src="images/icon-arrow-dark.svg" alt="">
+          </picture>
+            <!--dropdow-->
+            <nav class="dropdow_nav">
+              <a href="">Contact</a>
+              <a href="">NewLetter</a>
+              <a href="">Linkedin</a>
+            </nav>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!--conteudo principal do blog-->
+  <main>
+    <section id="topo">
+      <div class="container_topo">
+        <h2>A modern publishing platform</h2>
+        <p>Grow your audience and build your online brand</p>
+        
+        <div class="card_links">
+          <a href="" class="color_hover">Start for Free</a>
+          <a href="">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <h2>Designed for the future</h2>
+
+      <!--dois cards principais dividido com uma img terá que usar duas divs com flex uma para colum pros textos e row para colocar img do lado do txto-->
+      <div class="container_introducao">
+        <div class="card_text">
+          <div class="box_text">
+            <h3>Introducing an extensible editor</h3>
+            <p>Introducing an extensible editor
+              Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+              The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+              videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+              change the looks of a blog.</p>
+          </div>
+          <div class="box_text">
+            <h3>Robust content management</h3>
+            <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+              by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
+          </div>
+        </div>
+        <div class="card_img">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="images/illustration-editor-desktop.svg">
+
+            <img class="img_webb" src="images/illustration-editor-mobile.svg" alt="">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section id="mobile">
+      <div class="container_mobile">
+        <div class="card_img_mobile">
+          <img  src="images/illustration-phones.svg" alt="">
+        </div>
+        
+        <div class="card_mobile_info">
+          <h2>State of the Art Infrastructure</h2>
+          <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+            This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container_option">
+        <div class="card_img_option">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="images/illustration-laptop-desktop.svg">
+          <img src="images/illustration-laptop-mobile.svg" alt="">
+        </picture>
+        </div>
+        <div class="card_option_text">
+          <div class="box_text">
+            <h3>Free, open, simple</h3>
+            <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+              features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+              and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+          </div>
+          <div class="box_text">
+            <h3>Powerful tooling</h3>
+            <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+              capable of producing even the most complicated sites.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer>
+    <div class="container_footer">
+      <img src="images/logo.svg" alt="logo do Blogr">
+      <ul type="none">
+        <li><h4>Product</h4></li>
+        <li>Overview</li>
+        <li>Pricing</li>
+        <li>Marketplace</li>
+        <li>Features</li>
+        <li>Integrations</li>
+      </ul>
+
+      <ul type="none">
+        <li><h4>Company</h4></li>
+        <li>About</li>
+        <li>Team</li>
+        <li>Blog</li>
+        <li>Careers</li>
+      </ul>
+
+      <ul type="none">
+        <li><h4>Connect</h4></li>
+        <li>Contact</li>
+        <li>Newslatter</li>
+        <li>Linkedin</li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="minu.js"></script>
+</body>
+</html>

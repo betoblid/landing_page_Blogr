@@ -1,0 +1,124 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container_mobile{
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#btn_menu{ 
+    background: rgba(128, 33, 33, 0);
+}
+.feito{
+    animation: menu_bar .3s ease;
+}
+.hidden, .container_mobile{
+    display: none;
+   
+}
+.on{
+   
+}
+@media(max-width: 500px){
+    .container_mobile{
+        display: flex;
+    }
+    #container-menu{
+        position: absolute;
+        top: 45px;
+        width: 80%;
+    }
+    .dropdow ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: black;
+        min-height: 80vh;
+        
+    }
+    .dropdow ul li{
+        width: 100%;
+        text-align: center;
+    }
+    .dropdow ul li a{
+        display: block;
+        text-decoration: none;
+        color: white;
+        padding: 20px;
+
+    }
+    .dropdow ul li a:hover{
+        background: rgb(83, 80, 80);
+    }
+    @keyframes menu_bar {
+        to{
+            transform: rotate(100deg);
+        }
+        from{
+            transform: rotate(0deg);
+        }
+    }
+
+    /*menu dropdow*/
+    .nav_dropdow{
+        background: gray;
+        width: 80%;
+        margin: 0 auto;
+        display: none;
+    }
+
+    .dropdow1:hover .nav_dropdow{
+        display: block;
+
+    }
+    .dropdow1:hover .arrow1{
+        transform: rotate(180deg);
+    }
+}
+@media(min-width: 501px){
+    header{
+        background: black;
+    }
+    .hidden{
+        display: inline;
+    }
+    .nav_dropdow{
+        background: gray;
+        margin: 0 auto;
+        position: absolute;
+        top: 35px;
+        display: none;
+    }
+
+    .nav_dropdow a{
+        padding: 15px 10px;
+    }
+    .dropdow1:hover .nav_dropdow{
+        display: flex;
+        flex-direction: column;
+  
+    }
+    .dropdow1:hover .arrow1{
+        transform: rotate(180deg);
+    }
+
+    #container-menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+    .dropdow ul{
+        display: flex;
+        gap: 30px;
+
+    }
+    .dropdow ul li a{
+        color: white;
+        text-decoration: none;
+    }
+}

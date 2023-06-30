@@ -1,0 +1,397 @@
+/*fonts utilizadas no body*/
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Overpass:wght@300;600&display=swap');
+
+/*font-family: 'Manrope', sans-serif;
+font-family: 'Overpass', sans-serif;*/
+
+/*font ubunto*/
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Ubuntu:wght@400;500;700&display=swap');
+
+/*font-family: 'Manrope', sans-serif;
+font-family: 'Ubuntu', sans-serif;*/
+
+:root{
+    --Light-red: (CTA text) hsl(356, 100%, 66%);
+    --Very-light:/* red (CTA hover background)*/ hsl(355,100%, 74%);
+    --Very-daark/*blue (headings)*/: hsl(208, 49%, 24%);
+
+    /*cor natural*/
+    --White:/*(text)*/ hsl(0, 0%, 100%);
+    --Grayish-blue: /*(footer text)*/hsl(240, 2%, 79%);
+    --Very-dark: /*grayish-blue: (body copy)*/ hsl(207, 13%, 34%);
+    --Very-dark-black-blue:/*(footer background)*/ hsl(240, 10%, 16%);
+
+   /* Background gradient - Intro/CTA mobile nav:*/
+
+    --Very-light-red: hsl(13, 100%, 72%);
+    --Light-red: hsl(353, 100%, 62%);
+
+    /*Background gradient - body:*/
+
+    --Very-dark-grad-blue: hsl(237, 17%, 21%);
+    --Very-dark-desaturated-blue: hsl(237, 23%, 32%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*=============fazendo o dropdown do menu*/
+
+#topo{
+    background: linear-gradient(to right,var(--Very-light-red), var(--Light-red));
+    border-bottom-left-radius: 70px;
+}
+
+
+/*nessa parte aqui colocarei todos os efeitos dos links do topo ou seja o uso de hover ou efeitos normal*/
+
+.card_log a:first-of-type, .card_links a:nth-last-child(1){
+    text-decoration: none;
+    font-family: 'Overpass', sans-serif;
+    color: var(--White);
+}
+
+.color_hover, .card_log a:first-child:hover, .card_links a:hover{
+    background: var(--White);
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 40px;
+    color: var(--Light-red);
+    font-weight: 300;
+    text-decoration: none;
+    font-family: 'Overpass', sans-serif;
+}
+/*color hover no link start for free não pego então usei o pseudo elemento fist of type para selecionar o primeiro link e colocar o hover no card links*/
+.color_hover:hover, .card_links a:first-of-type:hover{
+    color: var(--White);
+    background: rgba(255, 255, 255, 0.295);
+}
+
+/*colocando efeitos de fundo com alinhamentos de texto na tela do topo*/
+.container_topo{
+    background-image: url("images/bg-pattern-intro-desktop.svg");
+    height: 100vh;
+    background-position: -150%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.container_topo h2{
+    font: 800 55px 'ubuntu', sans-serif;
+    color: var(--White);
+}
+.container_topo p{
+    font: 300 18px 'Overpass', sans-serif;
+    color: var(--White);
+}
+.container_topo a{
+    text-decoration: none;
+}
+
+
+
+/*card sobre abaixo do topo*/
+#sobre{
+    margin-bottom: 50px;
+}
+#sobre h2{
+    font: 800 30px 'ubuntu', 'arial';
+    margin: 30px auto;
+    text-align: center;
+}
+.container_introducao{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.box_text{
+    margin: 30px;
+}
+.box_text h3{
+    font: 700 20px 'ubuntu';
+    margin-bottom: 20px;
+}
+.box_text p{
+    font: 300 16px 'Overpass';
+}
+/*text sobre o app blogr*/
+#mobile{
+    margin: 50px 0;
+}
+.container_mobile{
+    display: flex;
+    flex-direction: row;
+       /*--Very-dark-grad-blue: hsl(237, 17%, 21%);
+    --Very-dark-desaturated-blue: hsl(237, 23%, 32%);*/
+    background: linear-gradient(to left ,var(--Very-dark-black-blue), var(--Very-dark-desaturated-blue));
+ 
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    height: 300px;
+    color: white;
+    position: relative;
+}
+.card_img_mobile img{
+    position: absolute;
+    top: -60px;
+}
+.card_mobile_info{
+    width: 60%;
+    margin: auto 0 auto 50%;
+    
+}
+.card_mobile_info p{
+    width: 70%;
+    font: 300 16px 'Overpass';
+    margin-top: 30px;
+}
+.card_mobile_info h2{
+    font: 800 26px 'ubuntu';
+}
+
+/*designer da ultima sessão antes do roda pe*/
+
+.container_option{
+    display: flex;
+    align-items: center;
+
+}
+
+/*footer estilos do roda pé*/
+.container_footer{
+    display: flex;
+    justify-content: space-evenly;
+    background: var(--Very-dark-black-blue);
+    color: var(--Grayish-blue);
+    border-top-right-radius: 70px;
+    padding: 70px;
+}
+.container_footer img{
+    width: 100px;
+    height: 80px;
+}
+.container_footer ul li{
+    font: 300 16px 'ubuntu';
+    margin: 10px 0 10px 0;
+    
+}
+.container_footer ul li h4{
+    font: 800 18px 'ubuntu';
+    margin-bottom: 20px;
+}
+@media(min-width: 50px) and (max-width: 580px){
+    .card_mobile_info{
+        margin: 10px auto 40px auto;
+    }
+    .container_mobile{
+        min-height: 52vh;
+    }
+
+}
+
+@media(max-width: 800px){
+
+    /*efeito colocado na imagem para que possa ficar responsivo serio problema com o tamanho das imagens*/
+    .card_img picture img, .card_img_option picture img{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /*todo o menu e feito dentro do media quary fiz isso para facilitar o designer e no futuro irei reparar isso e passar para fora do media*/
+    /*=============fazendo o dropdown do menu*/
+    .hidden{
+        display: none;
+    }
+    header{
+        position: absolute;
+        width: 100%;
+        margin-top: 10px;
+    }
+    #logo_desktop{
+        display: none;
+    }
+    .container_logo{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .container_logo h1{
+        font: 800 50px 'ubuntu';
+        color: white;
+    }
+    #btn_nav_bar{
+        background: rgba(0, 0, 0, 0);
+        border: none;
+    }
+    .container_nav_nar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .dropdow{
+        background-color: var(--White);
+        position: absolute;
+        top: 60px;
+        width: 80%;
+        min-height: 80vh;
+    }
+    /*efeitos do dropdow*/
+    .dropdow ul li:hover{
+        background-color: rgba(0, 0, 0, 0.105);
+    }
+    .dropdow ul li:hover img{
+        transform: rotate(180deg);
+    }
+    .dropdow ul{
+        list-style: none;
+        text-align: center;
+    }
+    .dropdow ul li{
+        padding: 30px 0;
+        font: 800 16px 'ubuntu';
+    }
+    /*destacando o dropdow para baixo do header*/
+
+
+    /*estilizando o dropdow*/
+    .dropdow_nav{
+        width: 80%;
+        margin: 10px auto;
+        display: none;
+    }
+    .dropdow_nav a{
+        display: block;
+        padding: 10px 0;
+        text-decoration: none;
+        color: white;
+        background: rgba(128, 128, 128, 0.521);
+    }
+    .dropdow_nav a:hover{
+        background-color: rgba(0, 0, 0, 0.459);
+    }
+    /*colocando o efeito onde voçê pasarar o mause e aparecerá o dropdow*/
+    .dropdow ul li:hover .dropdow_nav{
+        display: block;
+    }
+
+    /*parte do conteudo*/
+    .container_topo{
+        background: url("images/bg-pattern-intro-mobile.svg") center;
+    }
+    .container_topo h2{
+        font-size: 200%;
+    }
+    .container_topo p{
+        font-size: 100%;
+    }
+    .container_introducao{
+        flex-flow: row wrap;
+    }
+    #mobile{
+        margin-bottom: 50px;
+    }
+    .container_mobile{
+        flex-wrap: wrap;
+    }
+    .card_mobile_info{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        flex-direction: column;
+    }
+    .card_mobile_info p{
+        font-size: 13px;
+    }
+    .card_mobile_info h2{
+        font-size: 20px;
+    }
+    .card_img_mobile img{
+        width: 60%;
+
+    }
+    .container_option{
+        flex-wrap: wrap;
+    }
+    .container_footer{
+        flex-flow: column wrap;
+        align-items: center;
+        gap: 30px;
+    }
+
+    /*informação*/
+    .container_introducao{
+        flex-flow: column-reverse wrap;
+    }
+    source{
+        width: 100%;
+    }
+
+}
+@media(min-width: 800px){
+    .container_logo{
+        display: none;
+    }
+    header{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+    }
+    .dropdow ul{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        color: var(--White);
+    }
+
+    /*efeitos do dropdow*/
+    .dropdow ul li:hover img{
+        transform: rotate(180deg);
+        color: rgb(12, 12, 12);
+    }
+    .dropdow ul{
+        list-style: none;
+        text-align: center;
+    }
+    .dropdow ul li{
+        padding: 30px;
+        font: 800 16px 'ubuntu';
+    }
+    /*destacando o dropdow para baixo do header*/
+    .dropdow_nav{
+        position: absolute;
+    }
+    /*estilizando o dropdow*/
+    .dropdow_nav{
+        display: none;
+        width: 120px;
+    }
+    .dropdow_nav a{
+        display: block;
+        padding: 10px 0;
+        text-decoration: none;
+        color: black;
+        background: var(--Grayish-blue);
+    }
+    .dropdow_nav a:hover{
+        background-color: var(--White);
+    }
+    /*colocando o efeito onde voçê pasarar o mause e aparecerá o dropdow*/
+    .dropdow ul li:hover .dropdow_nav{
+        display: block;
+    }
+    .card_img_mobile img{
+        width: 420px;
+    }
+
+}
